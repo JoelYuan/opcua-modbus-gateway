@@ -2,6 +2,17 @@
 
 [English](#english) | [中文](#中文)
 
+To build all files in the package, you need to:
+
+- Use
+  # go run .
+  to run all files
+- Use
+  # go build .
+  to build all files
+
+
+
 ## 中文
 
 一个高性能的 OPC UA 与 Modbus 通信网关，用于连接 OPC UA 客户端与多个 Modbus TCP/RTU 从站设备。本项目旨在快速搭建工业自动化领域的 OPC UA 服务器，实现 Modbus 设备数据的统一访问和管理。
