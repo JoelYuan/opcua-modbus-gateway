@@ -1,121 +1,37 @@
 {
-  "devices": [
-    {
-      "name": "Modbus_Slave_1",
-      "type": "tcp",
-      "address": "192.168.2.12:502",
-      "slave": 1,
-      "unit": 1,
-      "read": [
-        {
-          "fc": 3,
-          "addr": 0,
-          "len": 1,
-          "period_ms": 1000,
-          "period": 1000
-        },
-        {
-          "fc": 4,
-          "addr": 1,
-          "len": 3,
-          "period_ms": 1000,
-          "period": 1000
-        }
-      ],
-      "write": [
-        {
-          "fc": 5,
-          "addr": 2000,
-          "len": 1,
-          "period_ms": 1000,
-          "period": 1000
-        },
-        {
-          "fc": 6,
-          "addr": 500,
-          "len": 1,
-          "period_ms": 1000,
-          "period": 1000
-        }
-      ]
-    },
-    {
-      "name": "Modbus_Slave_2",
-      "type": "tcp",
-      "address": "192.168.2.13:502",
-      "slave": 2,
-      "unit": 1,
-      "read": [
-        {
-          "fc": 3,
-          "addr": 10,
-          "len": 1,
-          "period_ms": 1000,
-          "period": 1000
-        },
-        {
-          "fc": 4,
-          "addr": 11,
-          "len": 3,
-          "period_ms": 1000,
-          "period": 1000
-        }
-      ],
-      "write": [
-        {
-          "fc": 5,
-          "addr": 2010,
-          "len": 1,
-          "period_ms": 1000,
-          "period": 1000
-        },
-        {
-          "fc": 6,
-          "addr": 510,
-          "len": 1,
-          "period_ms": 1000,
-          "period": 1000
-        }
-      ]
-    },
-    {
-      "name": "Modbus_Slave_3",
-      "type": "tcp",
-      "address": "192.168.2.14:502",
-      "slave": 3,
-      "unit": 1,
-      "read": [
-        {
-          "fc": 3,
-          "addr": 20,
-          "len": 1,
-          "period_ms": 1000,
-          "period": 1000
-        },
-        {
-          "fc": 4,
-          "addr": 21,
-          "len": 3,
-          "period_ms": 1000,
-          "period": 1000
-        }
-      ],
-      "write": [
-        {
-          "fc": 5,
-          "addr": 2020,
-          "len": 1,
-          "period_ms": 1000,
-          "period": 1000
-        },
-        {
-          "fc": 6,
-          "addr": 520,
-          "len": 1,
-          "period_ms": 1000,
-          "period": 1000
-        }
-      ]
-    }
-  ]
+  "192.168.1.10:502_S1": {
+    "read": [
+      {
+        "ip_port": "192.168.1.10:502",
+        "slave": 1,
+        "fc": 3,
+        "start_addr": 100,
+        "len": 2,
+        "base_array_idx": 0
+      }
+    ],
+    "write": [
+      {
+        "ip_port": "192.168.1.10:502",
+        "slave": 1,
+        "fc": 6,
+        "start_addr": 200,
+        "len": 1,
+        "base_array_idx": 500
+      }
+    ]
+  },
+  "192.168.1.11:502_S2": {
+    "read": [
+      {
+        "ip_port": "192.168.1.11:502",
+        "slave": 2,
+        "fc": 4,
+        "start_addr": 300,
+        "len": 2,
+        "base_array_idx": 0
+      }
+    ],
+    "write": []
+  }
 }
